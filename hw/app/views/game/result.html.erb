@@ -1,0 +1,43 @@
+<!-- <h1><%= @object%></h1>
+<h1><%= @pick_numbers[0]%></h1> -->
+<a href="/rps" >click to play again</a>
+
+<% if @object === "paper" %> 
+     <% if @pick_numbers[0] === 1 %> 
+     	<h2>It's a tie</h2>
+ 	<%elsif @pick_numbers[0] === 2%>
+     	<h2>you win</h2>
+ 	<%elsif @pick_numbers[0] === 3%>
+     	<h2>you lose</h2>
+     <% end %>
+ <%elsif @object === "scissor" %>
+     <% if @pick_numbers[0] === 1 %> 
+     	<h2>you win</h2>
+ 	<%elsif @pick_numbers[0] === 2%>
+     	<h2>you lose</h2>
+ 	<%elsif @pick_numbers[0] === 3%>
+     	<h2>It's a tie</h2>
+     <% end %>
+ <%elsif @object === "rock"%>
+     <% if @pick_numbers[0] === 1 %> 
+     	<h2>you lose</h2>
+ 	<%elsif @pick_numbers[0] === 2%>
+     	<h2>It's a tie</h2>
+ 	<%elsif @pick_numbers[0] === 3%>
+     	<h2>you win</h2>
+     <% end %>
+ <% end %><br>
+
+
+<h2>you chose: </h2><br>
+<%= image_tag "#{@object}.png" %><br>
+
+<h2>the computer chose: </h2><br>
+
+ <% if @pick_numbers[0] === 1 %> 
+     <%= image_tag "paper.png" %>
+ <%elsif @pick_numbers[0] === 2%>
+     <%= image_tag "rock.png" %>
+ <%elsif @pick_numbers[0] === 3%>
+     <%= image_tag "scissor.png" %>
+ <% end %><br>
