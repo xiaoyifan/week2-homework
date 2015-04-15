@@ -1,0 +1,14 @@
+<h1>Dice Game</h1>
+<hr>
+<img src="http://jeffcohenonline.com/dice/<%= @value[0] %>.png"><img src="http://jeffcohenonline.com/dice/<%= @value[1] %>.png">
+<br>
+<% if @goal_message%>
+<h2><%= @goal_message %></h2>
+<% end %>
+<h3><%= @info %></h3>
+
+<% if @button.eql? "Start over" %>
+	<a href="/dice"><%= @button %></a>
+<% else %>
+	<a class="btn btn-success btn-large" href="/roll?point=<%= @goal %>"><%= @button %></a>
+<% end %>
